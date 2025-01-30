@@ -1,0 +1,440 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Protest+Riot&display=swap');
+
+body{
+    min-height: 90vh;
+    background-color:rgb(254, 182, 203);
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Indie Flower';
+    font-weight: 400;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/collage.png');
+    background-size: contain;
+    background-repeat: repeat;
+}
+
+.parent{
+    background-color: #eeeedd;
+    width: 480px;
+    height: 480px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 100px 200px 0 rgba(0, 0, 0, 0.2), 0 100px 200px 0 rgba(0, 0, 0, 0.19);
+}
+.parent2{
+    width: 700px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #101011;
+    opacity: 1;
+}
+
+.child{
+    width: 400px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.child2{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.child h2{
+    width: 100%;
+    font-style: italic;
+    font-weight: 500;
+    text-align: left;
+}
+
+.child h3{
+    font-weight: 100;
+    text-align: justify;
+    font-size: 18px;
+}
+
+.child button{
+    background-color:rgb(202, 161, 240);
+    padding: 11px 25px;
+    border: 1px solid transparent;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-family: 'Indie Flower';
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+.child button:hover{
+    background-color:rgb(179, 136, 219);
+}
+
+.goodbye{
+    width: 100%;
+    text-align: left;
+    font-size: 16px;
+}
+
+
+
+/* part 2 */
+.img{
+    width: 260px;
+    height: 180px;
+}
+.img2{
+    width: 290px;
+    height: 200px;
+}
+.img3{
+    width: 350px;
+    height: 250px;
+}
+#btn-yes{
+    background-color: rgb(89, 188, 89);
+    width: 100px;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+    font-family: 'Indie Flower';
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 18px;
+}
+#btn-yes:hover{
+    background-color: rgb(70, 207, 70);
+}
+
+#btn-no{
+    background-color: rgb(219, 65, 65);
+    width: 100px;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+    font-family: 'Indie Flower';
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 18px;
+}
+#btn-no:hover{
+    background-color: rgb(255, 73, 73);
+}
+#btn-food{
+    background-color: rgb(229, 23, 88);
+    width: 120px;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+    font-family: 'Indie Flower';
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 18px;
+}
+#btn-food:hover{
+    background-color: rgb(70, 207, 70);
+}
+#btn-food1{
+    background-color: rgb(229, 23, 88);
+    width: 120px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+    font-family: 'Indie Flower';
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 18px;
+}
+#btn-food1:hover{
+    background-color: rgb(70, 207, 70);
+}
+@keyframes heartBeat{
+    0%{width: 35px;}
+    50%{width: 50px;}
+    100%{width: 35px;}
+}
+
+.heart {
+    display: inline-block;
+    width: 35px;
+    aspect-ratio: 1;
+    border-image: radial-gradient(red 69%, #0000 70%) 84.5%/50%;
+    clip-path: polygon(-41% 0, 50% 91%, 141% 0);
+    cursor: pointer;
+
+    animation-name: heartBeat;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes heartBeat-big{
+    0%{width: 85px;}
+    50%{width: 100px;}
+    100%{width: 85px;}
+}
+
+.heart-big {
+    display: inline-block;
+    width: 85px;
+    aspect-ratio: 1;
+    border-image: radial-gradient(red 69%, #0000 70%) 84.5%/50%;
+    clip-path: polygon(-41% 0, 50% 91%, 141% 0);
+    cursor: pointer;
+
+    animation-name: heartBeat-big;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes heartMove{
+    0% {left:50%; top:50%;}
+    100% {left:50%; top:0%;}
+}
+
+.heart-letter{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-name: heartMove;
+    animation-duration: 4s;  
+    animation-fill-mode: forwards;
+}
+
+@keyframes heartFloat-1{
+    0% {top: 100%;}
+    50% {left: 65%;}
+    100% {top: -10%; left: 60%;}
+}
+
+.heart-yes-1{
+    position: fixed;
+    top: 100%;
+    left: 50%;
+    animation: heartFloat-1;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+}
+
+@keyframes heartFloat-2{
+    0% {top: 100%; left: 38%;}
+    50% {left: 25%;}
+    100% {top: -10%; left: 25%;}
+}
+
+.heart-yes-2{
+    position: fixed;
+    top: 100%;
+    left: 50%;
+    animation: heartFloat-2;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-delay: 0.5s;
+}
+
+@keyframes heartFloat-3{
+    0% {top: 100%; left: 10%;}
+    50% {left: 10%;}
+    100% {top: -10%; left: 13%;}
+}
+
+.heart-yes-3{
+    position: fixed;
+    top: 100%;
+    left: 50%;
+    animation: heartFloat-3;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-delay: 0.7s;
+}
+
+@keyframes heartFloat-4{
+    0% {top: 100%; left: 90%;}
+    50% {left: 87%;}
+    100% {top: -10%; left: 91%;}
+}
+
+.heart-yes-4{
+    position: fixed;
+    top: 100%;
+    left: 50%;
+    animation: heartFloat-4;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-delay: 0.3s;
+}
+
+@keyframes heartFloat-5{
+    0% {top: 100%; left: 65%;}
+    50% {left: 50%;}
+    100% {top: -10%; left: 50%;}
+}
+
+.heart-yes-5{
+    position: fixed;
+    top: 100%;
+    left: 50%;
+    animation: heartFloat-5;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-delay: 3s;
+}
+
+@keyframes heartFloat-6{
+    0% {top: 100%; left: 25%;}
+    50% {left: 35%;}
+    100% {top: -10%; left: 35%;}
+}
+
+.heart-yes-6{
+    position: fixed;
+    top: 100%;
+    left: 50%;
+    animation: heartFloat-6;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-delay: 11s;
+}
+
+@keyframes heartFloat-6{
+    0% {top: 100%; left: 78%;}
+    50% {left: 78%;}
+    100% {top: -10%; left: 78%;}
+}
+
+.heart-yes-6{
+    position: fixed;
+    top: 100%;
+    left: 50%;
+    animation: heartFloat-6;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-delay: 4s;
+}
+
+@keyframes heartFloat-7{
+    0% {top: 100%; left: 41%;}
+    50% {left: 43%;}
+    100% {top: -10%; left: 44%;}
+}
+
+.heart-yes-7{
+    position: fixed;
+    top: 100%;
+    left: 50%;
+    animation: heartFloat-7;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes heartFloat-7{
+    0% {top: 100%; left: 26%;}
+    50% {left: 20%;}
+    100% {top: -10%; left: 17%;}
+}
+
+.heart-yes-7{
+    position: fixed;
+    top: 100%;
+    left: 50%;
+    animation: heartFloat-7;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes heartFloat-8{
+    0% {top: 100%; left: 36%;}
+    50% {left: 35%;}
+    100% {top: -10%; left: 35%;}
+}
+
+.heart-yes-8{
+    position: fixed;
+    top: 100%;
+    left: 50%;
+    animation: heartFloat-8;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-delay: 2.9s;
+}
+
+@keyframes heartFloat-9{
+    0% {top: 100%; left: 47%;}
+    50% {left: 44%;}
+    100% {top: -10%; left: 43%;}
+}
+
+.heart-yes-9{
+    position: fixed;
+    top: 100%;
+    left: 50%;
+    animation: heartFloat-9;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-delay: 2.5s;
+}
+
+@keyframes heartFloat-10{
+    0% {top: 100%; left: 97%;}
+    50% {left: 95%;}
+    100% {top: -10%; left: 96%;}
+}
+
+.heart-yes-10{
+    position: fixed;
+    top: 100%;
+    left: 50%;
+    animation: heartFloat-10;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+}
+
+@keyframes heartFloat-11{
+    0% {top: 100%; left: 5%;}
+    50% {left: 4%;}
+    100% {top: -10%; left: 3%;}
+}
+
+.heart-yes-11{
+    position: fixed;
+    top: 100%;
+    left: 50%;
+    animation: heartFloat-11;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-delay: 2.7s;
+}
+
+@keyframes heartFloat-12{
+    0% {top: 100%; left: 70%;}
+    50% {left: 71%;}
+    100% {top: -10%; left: 71%;}
+}
+
+.heart-yes-12{
+    position: fixed;
+    top: 100%;
+    left: 50%;
+    animation: heartFloat-12;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+}
